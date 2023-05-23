@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: rgb(225, 93, 68)">
+    <div
+      style="
+        margin: auto;
+        width: 50%;
+        border: 6px solid rgb(231, 114, 91);
+        border-style: outset;
+        padding: 10px;
+      "
+    >
+      <h1>LIVE° Weather</h1>
+      <form>
+        <input
+          style="
+            border-radius: 5px;
+            text-align: center;
+            background-color: rgb(235, 203, 160);
+            border-style: inset;
+          "
+          type="text"
+          id="city-name"
+          placeholder="Enter City"
+        />
+
+        <input
+          type="submit"
+          value="Get Weather"
+          style="background-color: rgb(240, 207, 123); margin-top: 10px"
+        />
+      </form>
+      <div id="main-div">
+        <br />
+        <div class="icon"></div>
+        <div class="description" style="color: rgb(252, 252, 252)"></div>
+        <br />
+        <div class="temperature"></div>
+        <div class="kelvin"></div>
+        <div class="fahrenheit"></div>
+        <div class="details"></div>
+      </div>
+      <br />
+      <br />
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
