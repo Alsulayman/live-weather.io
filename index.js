@@ -19,17 +19,17 @@ async function fetchWeatherData(cityValue) {
     );
 
     const data = await response.json();
-   
 
-    const temperature = "Temperature in Celsius:"+" "+data.main.temp +" "+"°C";
+
+    const temperature = "Temperature in Celsius:" + " " + data.main.temp + " " + "°C";
 
     const description = data.weather[0].description;
 
     const icon = data.weather[0].icon;
 
-    const details = "Humidity is:" +" "+ data.main.humidity + "%"
-    const fah = "Temperature in Fahrenheit:"+" " +(data.main.temp *9/5 + 32)+ " "+ "°F"
-    const kel = "Temperature in Kelvin:" + " " + (data.main.temp + 273.15) +" "+"k"
+    const details = "Humidity is:" + " " + data.main.humidity + "%"
+    const fah = "Temperature in Fahrenheit now:" + " " + (data.main.temp * 9 / 5 + 32) + " " + "°F"
+    const kel = "Temperature in Kelvin:" + " " + (data.main.temp + 273.15) + " " + "k"
 
     mainDivEl.querySelector(".icon").innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">`;
     mainDivEl.querySelector(".temperature").textContent = temperature;
@@ -42,8 +42,8 @@ async function fetchWeatherData(cityValue) {
     mainDivEl.querySelector(".temperature").textContent = "";
     mainDivEl.querySelector(".description").textContent =
       "No City was found on the Server ";
-      mainDivEl.querySelector(".fahrenheit").textContent = "";
-      mainDivEl.querySelector(".kelvin").textContent = "";
+    mainDivEl.querySelector(".fahrenheit").textContent = "";
+    mainDivEl.querySelector(".kelvin").textContent = "";
 
     mainDivEl.querySelector(".details").innerHTML =
       "<img src='https://cdn-icons-png.flaticon.com/512/5201/5201284.png' width='50px' height='50px'>";
