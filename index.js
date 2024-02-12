@@ -1,4 +1,5 @@
-const api = "46f80a02ecae410460d59960ded6e1c6";
+const api = "681676c6a80991562750999f64af1221";
+
 
 const mainDivEl = document.getElementById("main-div");
 
@@ -19,6 +20,8 @@ async function fetchWeatherData(cityValue) {
     );
 
     const data = await response.json();
+    console.log(data);
+    console.log(api);
 
 
     const temperature = "Temperature in Celsius:" + " " + data.main.temp + " " + "°C";
@@ -28,7 +31,7 @@ async function fetchWeatherData(cityValue) {
     const icon = data.weather[0].icon;
 
     const details = "Humidity is:" + " " + data.main.humidity + "%"
-    const fah = "Temperature in Fahrenheit now:" + " " + (data.main.temp * 9 / 5 + 32) + " " + "°F"
+    const fah = "Temperature in Fahrenheit:" + " " + (data.main.temp * 9 / 5 + 32) + " " + "°F"
     const kel = "Temperature in Kelvin:" + " " + (data.main.temp + 273.15) + " " + "k"
 
     mainDivEl.querySelector(".icon").innerHTML = `<img src="http://openweathermap.org/img/wn/${icon}.png" alt="Weather Icon">`;
