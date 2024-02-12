@@ -1,4 +1,4 @@
-const api = "681676c6a80991562750999f64af1221";
+const api = process.env.API_KEY;
 
 
 const mainDivEl = document.getElementById("main-div");
@@ -21,7 +21,7 @@ async function fetchWeatherData(cityValue) {
 
     const data = await response.json();
     console.log(data);
-    console.log(api);
+
 
 
     const temperature = "Temperature in Celsius:" + " " + data.main.temp + " " + "°C";
@@ -52,11 +52,3 @@ async function fetchWeatherData(cityValue) {
       "<img src='https://cdn-icons-png.flaticon.com/512/5201/5201284.png' width='50px' height='50px'>";
   }
 }
-
-// function convertToF(celValue) {
-
-
-
-// }
-// const tempValue = document.getElementById("fahrenheit").value;
-// mainDivEl.querySelector(".details").textContent = tempValue;
