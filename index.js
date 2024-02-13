@@ -1,4 +1,4 @@
-const api = process.env.API_KEY;
+const api = "681676c6a80991562750999f64af1221"
 
 
 const mainDivEl = document.getElementById("main-div");
